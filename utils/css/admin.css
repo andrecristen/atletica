@@ -1,0 +1,177 @@
+
+.actions{
+    text-align: center;
+}
+.actions-top{
+
+}
+.page-item input{
+    height: 100%;
+}
+
+.action-grid{
+    margin-left: 2px!important;
+    margin-right: 2px!important;
+}
+
+a {
+    color: #495057;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+li .active{
+    color: #007bff!important;
+}
+
+.row button{
+    margin-bottom: 3px!important;
+}
+
+.swal2-icon{
+    margin: 0px!important;
+}
+
+.swal2-title{
+    font-size: 20px!important;
+}
+
+.swal2-content{
+    font-size: 12px!important;
+}
+
+.swal2-popup{
+    padding: 10px!important;
+}
+
+table {
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px!important;
+    margin-top: 10px!important;
+    cursor: pointer;
+}
+
+.grid-filters{
+    font-size: 12px!important;
+}
+
+.grid-filters input, optgroup, select, textarea{
+    height: 17px!important;
+}
+
+.grid-filters button{
+    font-size: 12px!important;
+}
+
+.grid-filters-content{
+    margin-bottom: 2px!important;
+}
+
+.grid-filters-actions{
+    padding: 5px!important;
+}
+
+.content-pummax-message{
+    margin: 10%!important;
+}
+
+table button{
+    border-radius: 2px!important;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #555555b3!important;
+}
+
+.table td, .table th{
+    padding: 2px!important;
+}
+
+.dataTables_filter input, label{
+    width: 100%!important;
+}
+
+td, th {
+    border: 1px solid #aeaeae;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #c5c5c5;}
+
+tr:hover {background-color: #e4e4e4;}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #53a0af;
+    color: white;
+}
+
+.navbar{
+    left: -1px!important;
+    background: linear-gradient(154deg,#008fe2 0,#00b29c 100%)!important;
+}
+
+.logo-menu{
+    background-color: #008FE2!important;
+    height: 54px!important;
+    padding-top: 12px!important;
+}
+
+.center {
+    margin-top: 10px!important;
+    height: 120px!important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.collapse{
+    padding-right: 10px!important;
+}
+
+.navbar-nav{
+    padding-right: 10px!important;
+}
+
+.bem-vindo{
+    color: white;  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 99999999;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.append-in-tab{
+    padding: 15px!important;
+}

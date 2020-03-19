@@ -1,0 +1,5 @@
+ $t$this->addColumn(new Column('TYPE_DATE_TIME', 'TYPE_DATE_TIME', Column::TYPE_DATE_TIME,$this->getModelNameBase(),true));
+ $this->addColumn(new Column('TYPE_DATE', 'TYPE_DATE', Column::TYPE_DATE,$this->getModelNameBase(),true));
+ $column = $this->addColumn(new Column('TYPE_LIST', 'TYPE_LIST', Column::TYPE_LIST,$this->getModelNameBase(),true));
+ $column->setList([1 => 'Admin', 2 => 'Aluno']);
+ $this->addColumn(new Column('TYPE_BOOLEAN', 'TYPE_BOOLEAN', Column::TYPE_BOOLEAN,$this->getModelNameBase(),true));

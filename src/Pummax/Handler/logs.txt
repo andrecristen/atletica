@@ -1,0 +1,63 @@
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 00:36:24
+   Usuário #1 - dev@dev.com
+Argument 2 passed to Pummax\Controller\FilterGridController::__construct() must be of the type array, null given, called in C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php on line 41-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php(41): Pummax\Controller\FilterGridController->__construct(Object(Doctrine\ORM\QueryBuilder), NULL)
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseGridController->index()
+#2 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#3 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 00:36:39
+   Usuário #1 - dev@dev.com
+Argument 2 passed to Pummax\Controller\FilterGridController::__construct() must be of the type array, null given, called in C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php on line 41-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php(41): Pummax\Controller\FilterGridController->__construct(Object(Doctrine\ORM\QueryBuilder), NULL)
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseGridController->index()
+#2 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#3 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 00:36:48
+   Usuário #1 - dev@dev.com
+Argument 2 passed to Pummax\Controller\FilterGridController::__construct() must be of the type array, null given, called in C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php on line 41-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php(41): Pummax\Controller\FilterGridController->__construct(Object(Doctrine\ORM\QueryBuilder), NULL)
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseGridController->index()
+#2 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#3 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 00:37:00
+   Usuário #1 - dev@dev.com
+Argument 2 passed to Pummax\Controller\FilterGridController::__construct() must be of the type array, null given, called in C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php on line 41-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php(41): Pummax\Controller\FilterGridController->__construct(Object(Doctrine\ORM\QueryBuilder), NULL)
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseGridController->index()
+#2 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#3 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 00:37:03
+   Usuário #1 - dev@dev.com
+Argument 2 passed to Pummax\Controller\FilterGridController::__construct() must be of the type array, null given, called in C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php on line 41-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseGridController.php(41): Pummax\Controller\FilterGridController->__construct(Object(Doctrine\ORM\QueryBuilder), NULL)
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseGridController->index()
+#2 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#3 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 02:21:10
+   Usuário #1 - dev@dev.com
+Call to a member function getButtons() on null-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseFormController->add()
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#2 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#3 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #12/03/20 03:33:21
+   Usuário #1 - dev@dev.com
+Argument 1 passed to Pummax\Controller\BaseFormController::loadModelByKeys() must be of the type array, string given, called in C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseFormController.php on line 98-#0 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseFormController.php(98): Pummax\Controller\BaseFormController->loadModelByKeys('')
+#1 C:\wamp64\www\ATLETICA\src\Pummax\Controller\BaseFormController.php(75): Pummax\Controller\BaseFormController->editPost()
+#2 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(55): Pummax\Controller\BaseFormController->edit()
+#3 C:\wamp64\www\ATLETICA\src\Pummax\Controller\RouterController.php(19): Pummax\Controller\RouterController->run()
+#4 C:\wamp64\www\ATLETICA\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------

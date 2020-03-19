@@ -1,0 +1,93 @@
+<?php
+/**
+ * Template usado para geração dos nossos grids
+ */
+?>
+<div class="row grid-filters grid-filters-content">
+    <div class="col-sm-9">
+        <div style="height: 18px!important;" ng-repeat="filter in filters[tab.router]" class="col-sm-12 row grid-filters-content">
+            <div style="text-align: right" class="col-sm-2 grid-filters-actions">
+                <span>{{filter.title}}:</span>
+            </div>
+            <div class="col-sm-2 grid-filters-actions">
+                <select style="width: 100%" ng-options="item.operador as item.title for item in filter.operadores" ng-model="filters[tab.router][filter.content].operador"></select>
+            </div>
+            <div ng-if="filter.type == 'text'" class="col-sm-8 grid-filters-actions">
+                <input style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div ng-if="filter.type == 'number'" class="col-sm-8 grid-filters-actions">
+                <input type="number" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div ng-if="filter.type == 'date'" class="col-sm-8 grid-filters-actions">
+                <input class="date" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div ng-if="filter.type == 'dateTime'" class="col-sm-8 grid-filters-actions">
+                <input class="dateTime" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div ng-if="filter.type == 'list' || filter.type == 'boolean'" class="col-sm-8 grid-filters-actions">
+                <select style="width: 95%" ng-options="value as description for (value, description) in filter.list" ng-model="filters[tab.router][filter.content].value"></select>&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 row grid-filters-actions">
+        <div class="col-sm-7 grid-filters-actions">
+            <select ng-model="filterSelected[tab.router]" ng-change="controller.openFilter(tab.router)" style="width: 100%" ng-options="item.content as item.title for item in columns[tab.router]"></select>
+        </div>
+        <div class="col-sm-5 grid-filters-actions">
+            <button ng-click="controller.reloadGrid(tab.router)" class="btn btn-sm btn-outline-dark">Atualizar&nbsp;<i class="fas fa-redo"></i></button>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 5px!important;" class="row">
+    <div class="col-sm-12">
+        <button ng-if="!action.isRow" ng-repeat="action in actions[tab.router]" ng-class="action.class" class="action-grid" ng-click="controller.callAction(action)">{{action.title}}&nbsp;<i ng-class="action.icon"></i></button>
+        <button ng-if="action.isRow" ng-disabled="countRowsSelecteds[tab.router] < 1" ng-repeat="action in actions[tab.router]" ng-class="action.class" class="action-grid" ng-click="controller.callAction(action)">{{action.title}}&nbsp;<i ng-class="action.icon"></i></button>
+    </div>
+</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 40px!important;">
+        <col ng-repeat="column in columns[tab.router]" style="width: {{column.width}}!important;">
+    </colgroup>
+    <thead>
+    <tr>
+        <th class="grid-checkbox"></th>
+        <th ng-repeat="column in columns[tab.router]">{{column.title}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-dblclick="controller.selectRow($index, tab.router, row)" ng-repeat="row in rows[tab.router] track by $index">
+        <td style="text-align: center" class="grid-checkbox">
+            <input type="checkbox" ng-model="rowsSelecteds[tab.router][$index].selected" ng-click="controller.selectRow($index, tab.router, row)">
+        </td>
+        <td ng-repeat="column in columns[tab.router]">{{row[column.tableName+'_'+column.content]}}{{}}</td>
+    </tr>
+    </tbody>
+</table>
+<span>Total de registros:&nbsp;{{countRows[tab.router]}}</span>
+<nav style="float: right" aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item small" title="Primeira Página">
+            <a ng-click="controller.pageFirst(tab.router)" class="page-link" href="" aria-label="Previous">
+                <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
+            </a>
+        </li>
+        <li class="page-item small" title="Página Anterior">
+            <a ng-click="controller.pageAnterior(tab.router)" class="page-link" href="" aria-label="Previous">
+                <span aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+            </a>
+        </li>
+        <li class="page-item small"><input ng-keypress="controller.pageSelecionada(tab.router, $event)" ng-model="pageAtual[tab.router]" min="1" max="{{countPages[tab.router]}}" step="1" type="number"></li>
+        <li class="page-item small"><input ng-model="countPages[tab.router]" ng-disabled="true" min="1" max="{{countPages[tab.router]}}" step="1" type="number"></li>
+        <li class="page-item small" title="Próxima Página">
+            <a ng-click="controller.pageProxima(tab.router)" class="page-link" href="" aria-label="Next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+            </a>
+        <li class="page-item small" title="Última Página">
+            <a ng-click="controller.pageLast(tab.router)" class="page-link" href="" aria-label="Next">
+                <span aria-hidden="true"><i class="fas fa-angle-double-right"></i></span>
+            </a>
+        </li>
+        </li>
+    </ul>
+</nav>

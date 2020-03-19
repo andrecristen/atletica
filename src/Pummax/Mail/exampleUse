@@ -1,0 +1,4 @@
+$remetente = new \Pummax\Mail\Email('smtp.gmail.com', 587, 'tls','andrecristenibirama@gmail.com', 'senhasegura', 'Atletica');
+$email = new \Pummax\Mail\MessageEmail('Teste envio', '<br/><strong>ISSO É SÓ UM TESTE</strong>', 'andrecristenibirama@gmail.com');
+$sender = new \Pummax\Mail\SendEmail();
+$sender->send($remetente, $email);

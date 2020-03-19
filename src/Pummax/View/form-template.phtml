@@ -1,0 +1,24 @@
+<?php
+/**
+ * Template usado para geração dos nossos forms
+ */
+?>
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">{{form.title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form name="modal" id="append-modal" class="modal-body">
+                <div ng-bind-html="trustedHtml(form.html)">
+                </div>
+            </form>
+            <div id="append-modal-actions" class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
