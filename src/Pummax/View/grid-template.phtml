@@ -10,22 +10,22 @@
                 <span>{{filter.title}}:</span>
             </div>
             <div class="col-sm-2 grid-filters-actions">
-                <select style="width: 100%" ng-options="item.operador as item.title for item in filter.operadores" ng-model="filters[tab.router][filter.content].operador"></select>
+                <select ng-keypress="controller.apllyFilter($event, tab.router)" style="width: 100%" ng-options="item.operador as item.title for item in filter.operadores" ng-model="filters[tab.router][filter.content].operador"></select>
             </div>
             <div ng-if="filter.type == 'text'" class="col-sm-8 grid-filters-actions">
-                <input style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+                <input ng-keypress="controller.apllyFilter($event, tab.router)" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
             </div>
             <div ng-if="filter.type == 'number'" class="col-sm-8 grid-filters-actions">
-                <input type="number" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+                <input ng-keypress="controller.apllyFilter($event, tab.router)" type="number" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
             </div>
             <div ng-if="filter.type == 'date'" class="col-sm-8 grid-filters-actions">
-                <input class="date" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+                <input ng-keypress="controller.apllyFilter($event, tab.router)" class="date" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
             </div>
             <div ng-if="filter.type == 'dateTime'" class="col-sm-8 grid-filters-actions">
-                <input class="dateTime" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+                <input ng-keypress="controller.apllyFilter($event, tab.router)" class="dateTime" style="width: 95%" ng-model="filters[tab.router][filter.content].value">&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
             </div>
             <div ng-if="filter.type == 'list' || filter.type == 'boolean'" class="col-sm-8 grid-filters-actions">
-                <select style="width: 95%" ng-options="value as description for (value, description) in filter.list" ng-model="filters[tab.router][filter.content].value"></select>&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
+                <select ng-keypress="controller.apllyFilter($event, tab.router)" style="width: 95%" ng-options="value as description for (value, description) in filter.list" ng-model="filters[tab.router][filter.content].value"></select>&nbsp;<a ng-click="controller.closeFilter(filter.content, tab.router)" title="Remover Filtro" style="width: 5%; cursor: pointer!important;"><i class="far fa-trash-alt"></i></a>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-dblclick="controller.selectRow($index, tab.router, row)" ng-repeat="row in rows[tab.router] track by $index">
+    <tr ng-click="controller.selectRow($index, tab.router, row)" ng-repeat="row in rows[tab.router] track by $index">
         <td style="text-align: center" class="grid-checkbox">
             <input type="checkbox" ng-model="rowsSelecteds[tab.router][$index].selected" ng-click="controller.selectRow($index, tab.router, row)">
         </td>

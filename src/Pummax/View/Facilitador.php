@@ -14,6 +14,7 @@ class Facilitador
         $baseControl = new BaseController();
         $usuario = $baseControl->getUserSession();
         $usuario = $usuario[0]['usu_login'];
+        $cache = "?v=19-03-2020-1";
         include 'admin.phtml';
     }
 

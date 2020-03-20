@@ -138,6 +138,12 @@ app.controller('MainController', function($scope, RouterUtil, $sce, $q, $compile
         offOverlay();
     };
 
+    vm.apllyFilter = function(event, router){
+        if(event.which === 13) {
+            vm.reloadGrid(router, 1);
+        }
+    };
+
     vm.pageFirst = function(router){
         if($scope.pageAtual[router] == 1){
             return;
@@ -503,6 +509,5 @@ app.controller('MainController', function($scope, RouterUtil, $sce, $q, $compile
     }
 
 });
-
 
 
