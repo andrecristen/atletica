@@ -11,7 +11,7 @@ class Pessoa
 {
     /**
      * @Id
-     * @Column(name="usu_id", type="integer")
+     * @Column(name="pes_id", type="integer")
      * @GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
@@ -27,10 +27,94 @@ class Pessoa
     protected $sobrenome;
 
     /**
-     * @Column(name="pes_cpf_cnpj", type="string")
+     * @Column(name="pes_cpf", type="string")
      */
-    protected $cpfCnpj;
+    protected $cpf;
 
+    /**
+     * @Column(name="pes_data_nascimento", type="date")
+     */
+    protected $dataNascimento;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param mixed $nome
+     */
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSobrenome()
+    {
+        return $this->sobrenome;
+    }
+
+    /**
+     * @param mixed $sobrenome
+     */
+    public function setSobrenome($sobrenome)
+    {
+        $this->sobrenome = $sobrenome;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+
+    /**
+     * @param mixed $cpf
+     */
+    public function setCpf($cpf)
+    {
+        $this->cpf = $cpf;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataNascimento()
+    {
+        return $this->dataNascimento;
+    }
+
+    /**
+     * @param mixed $dataNascimento
+     */
+    public function setDataNascimento($dataNascimento)
+    {
+        $this->dataNascimento = $dataNascimento;
+    }
 
 
 

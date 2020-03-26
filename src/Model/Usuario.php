@@ -27,6 +27,17 @@ class Usuario
     protected $senha;
 
     /**
+     * @ManyToOne(targetEntity="Pessoa")
+     * @JoinColumn(name="pes_id", referencedColumnName="pes_id", nullable=false)
+     */
+    protected $pessoa;
+
+    /**
+     * @Column(name="usu_token", type="string")
+     */
+    protected $token;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -74,6 +85,21 @@ class Usuario
         $this->senha = $senha;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPessoa()
+    {
+        return $this->pessoa;
+    }
+
+    /**
+     * @param mixed $pessoa
+     */
+    public function setPessoa($pessoa)
+    {
+        $this->pessoa = $pessoa;
+    }
 
 
 }

@@ -17,12 +17,12 @@ class DataBase
             'driver' => 'pdo_pgsql',
         );
         //MySql
-        $conn = array(
-            'dbname' => 'atletica',
-            'user' => 'root',
-            'host' => 'localhost',
-            'driver' => 'pdo_mysql',
-        );
+//        $conn = array(
+//            'dbname' => 'atletica',
+//            'user' => 'root',
+//            'host' => 'localhost',
+//            'driver' => 'pdo_mysql',
+//        );
         return $conn;
     }
 
