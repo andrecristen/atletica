@@ -9,6 +9,10 @@ namespace Model;
  */
 class Usuario
 {
+
+    const TIPO_ADMIN = 1;
+    const TIPO_ALUNO = 2;
+
     /**
      * @Id
      * @Column(name="usu_id", type="integer")
@@ -36,6 +40,11 @@ class Usuario
      * @Column(name="usu_token", type="string")
      */
     protected $token;
+
+    /**
+     * @Column(name="usu_tipo", type="smallint", nullable=false, options={"default":2})
+     */
+    protected $tipo;
 
     /**
      * @return mixed
@@ -99,6 +108,46 @@ class Usuario
     public function setPessoa($pessoa)
     {
         $this->pessoa = $pessoa;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param mixed $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * @param mixed $tipo
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+    }
+
+
+    public static function getTipoList(){
+        return [
+            self::TIPO_ADMIN => 'Administrador',
+            self::TIPO_ALUNO => 'Aluno',
+        ];
     }
 
 

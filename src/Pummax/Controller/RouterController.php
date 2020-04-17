@@ -4,6 +4,7 @@
 namespace Pummax\Controller;
 
 
+use Model\Usuario;
 use Pummax\Configuration\RouterDefine;
 use Pummax\Response\BaseResponse;
 use Pummax\Response\MessageResponse;
@@ -42,7 +43,7 @@ class RouterController
             $routerArray = $found;
             if($found){
                 if($found['privilegio'] == RouterDefine::ADMIN_USER){
-                    if(!$this->getBaseController()->getUserSession()){
+                    if(!$this->getBaseController()->getUserModelSession() || ($this->getBaseController()->getUserModelSession() && $this->getBaseController()->getUserModelSession()->getTipo() == Usuario::TIPO_ALUNO)){
                         ContainerController::pageAcessoNegado();
                         die;
                     }

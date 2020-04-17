@@ -3,6 +3,7 @@
 namespace Pummax\Controller;
 
 
+use Model\Usuario;
 use Pummax\Configuration\DataBase;
 use Pummax\DataBase\Connection;
 use Pummax\Handler\HandlerException;
@@ -55,6 +56,17 @@ class BaseController extends HandlerException
 
     public function getUserSession(){
         return $this->getOnSession('usuario');
+    }
+
+    /**
+     * @return Usuario|null
+     */
+    public function getUserModelSession(){
+        $user = $this->getOnSession('usuario');
+        if(isset($user[0]['usu_id'])){
+            return $this->getEntityManager()->getRepository(Usuario::class)->find($user[0]['usu_id']);
+        }
+        return null;
     }
 
     public static function getUserSessionStatic(){
