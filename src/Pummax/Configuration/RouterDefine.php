@@ -95,6 +95,31 @@ class RouterDefine
                 'privilegio' => self::ADMIN_USER,
                 'title' => 'Visualizar Banner'
             ],
+            '/carteiras' => [
+                'control' => 'Control::Grid::CarteiraGridController.index',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Carteiras'
+            ],
+            '/addCarteira' => [
+                'control' => 'Control::Form::CarteiraFormController.add',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Adicionar Carteira'
+            ],
+            '/editCarteira' => [
+                'control' => 'Control::Form::CarteiraFormController.edit',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Alterar Carteira'
+            ],
+            '/deleteCarteira' => [
+                'control' => 'Control::Form::CarteiraFormController.delete',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Excluir Carteira'
+            ],
+            '/viewCarteira' => [
+                'control' => 'Control::Form::CarteiraFormController.view',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Visualizar Carteira'
+            ],
         );
     }
 }

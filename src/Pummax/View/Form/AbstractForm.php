@@ -17,12 +17,19 @@ abstract class AbstractForm extends BaseController
 
     protected $buttons;
 
+    protected $maximized;
+
     public function __construct($isView = false)
     {
         parent::__construct();
+        $this->defineAtributes();
         $this->html = $this->createHtml();
         $this->isView = $isView;
         $this->dataMappingArray = $this->getDataMapping();
+    }
+
+    public function defineAtributes(){
+
     }
 
     /**
@@ -122,6 +129,22 @@ abstract class AbstractForm extends BaseController
     public function setDataMappingArray($dataMappingArray)
     {
         $this->dataMappingArray = $dataMappingArray;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMaximized()
+    {
+        return $this->maximized;
+    }
+
+    /**
+     * @param mixed $maximized
+     */
+    public function setMaximized($maximized)
+    {
+        $this->maximized = $maximized;
     }
 
 

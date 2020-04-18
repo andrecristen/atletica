@@ -247,18 +247,8 @@ abstract class BaseFormController extends BaseController
     /**
      * Passa os dados do modelo para a tela
      */
-    public function beanForm($model = null, $dataMapping = null){
-        if(!$model){
-            $model = $this->getModel();
-        }
-        if(!$dataMapping){
-            $dataMapping = $this->getView()->getDataMappingArray();
-        }
-        $data = [];
-        foreach ($dataMapping as $atributo){
-            $data[$atributo] = $model->{'get'.ucwords($atributo)}();
-        }
-        return $data;
+    public function beanForm(){
+        return $this->getFormBean()->loadDataBeanForm($this->getView()->getDataMappingArray(), $this->getModel());
     }
 
 

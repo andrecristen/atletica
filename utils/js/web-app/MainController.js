@@ -329,6 +329,10 @@ app.controller('MainController', function($scope, RouterUtil, $sce, $q, $compile
 
     function processaDataForm(data, router, routerOrigem) {
         $scope.form.title = data.title;
+        if(data.data.maximized){
+            $scope.form.maximizedClass = 'modal-dialog-full';
+            $scope.form.maximizedClassContent = 'modal-content-full';
+        }
         $scope.form.router = router;
         $scope.form.routerOrigem = routerOrigem;
         //Adiciona tudo que recebemos no nosso dataForm
