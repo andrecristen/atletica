@@ -26,6 +26,10 @@ class MenuDefine
                 'router' => 'cursos',
                 'icon' => 'fas fa-book'
             ],
+            'Parceiros' => [
+                'router' => 'parceiros',
+                'icon' => 'fas fa-handshake'
+            ],
         ];
     }
 

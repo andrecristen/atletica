@@ -50,3 +50,104 @@ Unsupported operand types-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atleti
 #2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
 #3 {main}
 ----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 18:58:38
+   Usuário #1 - dev@dev.com.br
+Cannot use [] for reading-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(100): Control\Form\UsuarioFormController->beanPost()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(75): Pummax\Controller\BaseFormController->editPost()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseFormController->edit()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 18:59:25
+   Usuário #1 - dev@dev.com.br
+Cannot use [] for reading-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(100): Control\Form\UsuarioFormController->beanPost()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(75): Pummax\Controller\BaseFormController->editPost()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseFormController->edit()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 19:44:53
+   Usuário #1 - dev@dev.com.br
+Erro no envio do e-mail: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Form\CarteiraFormController.php(87): Pummax\Mail\SendEmail->send(Object(Pummax\Mail\Email), Object(Pummax\Mail\MessageEmail))
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(174): Control\Form\CarteiraFormController->beanModel()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(65): Pummax\Controller\BaseFormController->beanPost()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(46): Pummax\Controller\BaseFormController->addPost()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseFormController->add()
+#5 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#6 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#7 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 19:48:16
+   Usuário #1 - dev@dev.com.br
+Erro no envio do e-mail: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Form\CarteiraFormController.php(87): Pummax\Mail\SendEmail->send(Object(Pummax\Mail\Email), Object(Pummax\Mail\MessageEmail))
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(174): Control\Form\CarteiraFormController->beanModel()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(65): Pummax\Controller\BaseFormController->beanPost()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(46): Pummax\Controller\BaseFormController->addPost()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseFormController->add()
+#5 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#6 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#7 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 20:47:02
+   Usuário #1 - dev@dev.com.br
+Class 'Control\Grid\ParceiroGrid' not found-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(65): Control\Grid\ParceiroGridController->instanceView()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\ContainerController.php(11): Pummax\Controller\BaseGridController->__construct()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(52): Pummax\Controller\ContainerController::newController('Control::Grid::...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 20:47:31
+   Usuário #1 - dev@dev.com.br
+Class 'Control\Grid\ParceiroGrid' not found-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(65): Control\Grid\ParceiroGridController->instanceView()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\ContainerController.php(11): Pummax\Controller\BaseGridController->__construct()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(52): Pummax\Controller\ContainerController::newController('Control::Grid::...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 20:47:38
+   Usuário #1 - dev@dev.com.br
+Class 'Control\Grid\ParceiroGrid' not found-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(65): Control\Grid\ParceiroGridController->instanceView()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\ContainerController.php(11): Pummax\Controller\BaseGridController->__construct()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(52): Pummax\Controller\ContainerController::newController('Control::Grid::...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 22:58:01
+   Usuário #6 - dev@dev.com.br
+Call to a member function createQueryConsulta() on null-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(40): Pummax\Controller\BaseGridController->createInstanceQuery()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseGridController->index()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 22:58:42
+   Usuário #6 - dev@dev.com.br
+Call to a member function createQueryConsulta() on null-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(40): Pummax\Controller\BaseGridController->createInstanceQuery()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseGridController->index()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 22:59:23
+   Usuário #6 - dev@dev.com.br
+Call to a member function createQueryConsulta() on null-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(40): Pummax\Controller\BaseGridController->createInstanceQuery()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseGridController->index()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#4 {main}
+----------------- FIM ------------------

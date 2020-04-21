@@ -150,6 +150,41 @@ class RouterDefine
                 'privilegio' => self::ADMIN_USER,
                 'title' => 'Visualizar Curso'
             ],
+            '/parceiros' => [
+                'control' => 'Control::Grid::ParceiroGridController.index',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Parceiros'
+            ],
+            '/addParceiro' => [
+                'control' => 'Control::Form::ParceiroFormController.add',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Adicionar Parceiro'
+            ],
+            '/editParceiro' => [
+                'control' => 'Control::Form::ParceiroFormController.edit',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Alterar Parceiro'
+            ],
+            '/deleteParceiro' => [
+                'control' => 'Control::Form::ParceiroFormController.delete',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Excluir Parceiro'
+            ],
+            '/viewParceiro' => [
+                'control' => 'Control::Form::ParceiroFormController.view',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Visualizar Parceiro'
+            ],
+            '/inativarParceiro' => [
+                'control' => 'Control::Form::ParceiroFormController.inativar',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Inativar Parceiro'
+            ],
+            '/ativarParceiro' => [
+                'control' => 'Control::Form::ParceiroFormController.ativar',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Ativar Parceiro'
+            ],
         );
     }
 }

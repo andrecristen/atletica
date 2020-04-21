@@ -9,6 +9,9 @@ use Model\Imagem;
 class ImagemController extends BaseController
 {
     public function novaImagem($fileName, $tipo = Imagem::TIPO_USUARIO, $persist = true){
+        if(!isset($_FILES[$fileName])){
+            return null;
+        }
         $nome = $_FILES[$fileName]['tmp_name'];
         if(!$nome){
             return null;

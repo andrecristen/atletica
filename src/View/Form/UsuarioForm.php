@@ -47,7 +47,6 @@ class UsuarioForm extends AbstractForm
                     <input ng-required="true" ng-model="data.pessoa.dataNascimento" type="date" class="form-control" id="pessoa.dataNascimento">
                 </div>
             </fieldset>
-           
         </div>';
     }
 

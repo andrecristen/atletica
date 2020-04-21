@@ -36,13 +36,18 @@ class Parceiro
     /**
      * @Column(name="par_porcentagem_desconto", type="decimal")
      */
-    protected $pocentagemDesconto;
+    protected $porcentagemDesconto;
 
     /**
      * @ManyToOne(targetEntity="Endereco")
      * @JoinColumn(name="end_id", referencedColumnName="end_id", nullable=true)
      */
     protected $endereco;
+
+    /**
+     * @Column(name="par_ativo", type="boolean")
+     */
+    protected $ativo;
 
     /**
      * @return mixed
@@ -111,17 +116,17 @@ class Parceiro
     /**
      * @return mixed
      */
-    public function getPocentagemDesconto()
+    public function getPorcentagemDesconto()
     {
-        return $this->pocentagemDesconto;
+        return $this->porcentagemDesconto;
     }
 
     /**
-     * @param mixed $pocentagemDesconto
+     * @param mixed $porcentagemDesconto
      */
-    public function setPocentagemDesconto($pocentagemDesconto)
+    public function setPorcentagemDesconto($porcentagemDesconto)
     {
-        $this->pocentagemDesconto = $pocentagemDesconto;
+        $this->porcentagemDesconto = $porcentagemDesconto;
     }
 
     /**
@@ -138,6 +143,22 @@ class Parceiro
     public function setEndereco($endereco)
     {
         $this->endereco = $endereco;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAtivo()
+    {
+        return $this->ativo;
+    }
+
+    /**
+     * @param mixed $ativo
+     */
+    public function setAtivo($ativo)
+    {
+        $this->ativo = $ativo;
     }
 
 
