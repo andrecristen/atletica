@@ -65,7 +65,7 @@ class CarteiraFormController extends BaseFormController
             $usuario->setPessoa($pessoa);
             $usuario->setTipo(Usuario::TIPO_ALUNO);
             $usuario->setSenha($pessoa->getDataNascimento()->format('dmY'));
-            $usuario->setToken(md5(uniqid($usuario->getLogin(), true)));
+            $usuario->setToken(Usuario::generateToken($usuario));
             $this->getEntityManager()->persist($usuario);
             $this->getModel()->setUsuario($usuario);
             //Nova imagem

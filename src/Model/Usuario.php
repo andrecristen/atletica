@@ -150,5 +150,9 @@ class Usuario
         ];
     }
 
+    public static function generateToken(Usuario $usuario){
+        return md5(uniqid($usuario->getLogin(), true));
+    }
+
 
 }
