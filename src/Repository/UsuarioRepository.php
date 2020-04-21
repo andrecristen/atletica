@@ -4,10 +4,19 @@
 namespace Repository;
 
 
+use Model\Usuario;
 use Pummax\Repository\BaseRepository;
 
 class UsuarioRepository extends BaseRepository
 {
+
+    public function createQueryConsulta()
+    {
+        $query = parent::createQueryConsulta();
+        $query->andWhere('Usuario.tipo = :admin');
+        $query->setParameter('admin', Usuario::TIPO_ADMIN);
+        return $query;
+    }
 
     public function validaLogin($login, $senha){
         $sql = "SELECT * 

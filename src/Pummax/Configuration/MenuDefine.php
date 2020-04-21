@@ -22,6 +22,10 @@ class MenuDefine
                 'router' => 'usuarios',
                 'icon' => 'fas fa-users'
             ],
+            'Cursos' => [
+                'router' => 'cursos',
+                'icon' => 'fas fa-book'
+            ],
         ];
     }
 

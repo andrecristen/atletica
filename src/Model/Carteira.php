@@ -73,7 +73,7 @@ class Carteira
     }
 
     /**
-     * @return mixed
+     * @return Usuario
      */
     public function getUsuario()
     {

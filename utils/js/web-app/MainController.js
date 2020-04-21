@@ -341,6 +341,7 @@ app.controller('MainController', function($scope, RouterUtil, $sce, $q, $compile
         });
         $scope.data = {};
         angular.forEach(data.data.form, function (value, name) {
+            value = formatValues(value);
             $scope.data[name] = value;
         });
         //Tem algum controller externo? Adiciona eles e compila o HTML
@@ -371,10 +372,24 @@ app.controller('MainController', function($scope, RouterUtil, $sce, $q, $compile
         });
         var buttons = $compile(buttons)($scope);
         appendHtmlOnModalFooter(buttons);
+        applyMasks();
         openModal();
         if(data.data.isView){
             $('#append-modal').find('input, textarea, button, select').attr('disabled','disabled');
         }
+    }
+
+    function formatValues(value) {
+       //Formata os campos date
+        if(value.type && value.type == 'date'){
+            value = new Date(value.value);
+        }else if(typeof value === 'object'){
+            angular.forEach(value, function (valueChild, nameChild) {
+                valueChild = formatValues(valueChild);
+                value[nameChild] = valueChild;
+            });
+        }
+        return value;
     }
 
     function openCloseModal() {

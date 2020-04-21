@@ -120,6 +120,31 @@ class RouterDefine
                 'privilegio' => self::ADMIN_USER,
                 'title' => 'Visualizar Carteira'
             ],
+            '/cursos' => [
+                'control' => 'Control::Grid::CursoGridController.index',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Cursos'
+            ],
+            '/addCurso' => [
+                'control' => 'Control::Form::CursoFormController.add',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Adicionar Curso'
+            ],
+            '/editCurso' => [
+                'control' => 'Control::Form::CursoFormController.edit',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Alterar Curso'
+            ],
+            '/deleteCurso' => [
+                'control' => 'Control::Form::CursoFormController.delete',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Excluir Curso'
+            ],
+            '/viewCurso' => [
+                'control' => 'Control::Form::CursoFormController.view',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Visualizar Curso'
+            ],
         );
     }
 }

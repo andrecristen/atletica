@@ -28,6 +28,9 @@ class FormResponse extends BaseResponse
         $this->data = $data;
         $this->data['maximized'] = $view->getMaximized();
         $this->data['isView'] = $view->isView();
+        foreach ($view->getScopeData() as $key => $value){
+            $this->data['params'][$key] = $value;
+        }
         $buttonsArray = [];
         foreach ($buttons as $button){
             $buttonsArray[] = $button->getArrayFormat();

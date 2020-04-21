@@ -227,7 +227,10 @@ class FormBean extends BaseController
                 $name = $mapping;
                 $value = PummaxReflection::callGetter($model, $mapping);
                 if($value instanceof \DateTime){
-                    $value = $value->format(\DateTime::W3C);
+                    $value = [
+                        'type' => 'date',
+                        'value' => $value->format(\DateTime::W3C)
+                    ];
                 }
                 //se o value é nulo vamos mandar para o front uma string
                 //erro em componentes que n tratam essa situação

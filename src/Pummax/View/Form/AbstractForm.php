@@ -19,6 +19,8 @@ abstract class AbstractForm extends BaseController
 
     protected $maximized;
 
+    protected $scopeData;
+
     public function __construct($isView = false)
     {
         parent::__construct();
@@ -26,6 +28,7 @@ abstract class AbstractForm extends BaseController
         $this->html = $this->createHtml();
         $this->isView = $isView;
         $this->dataMappingArray = $this->getDataMapping();
+        $this->scopeData = $this->getScopeData();
     }
 
     public function defineAtributes(){
@@ -145,6 +148,22 @@ abstract class AbstractForm extends BaseController
     public function setMaximized($maximized)
     {
         $this->maximized = $maximized;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getScopeData()
+    {
+        return $this->scopeData;
+    }
+
+    /**
+     * @param mixed $scopeData
+     */
+    public function addScopeData($name, $value)
+    {
+        $this->scopeData[$name] = $value;
     }
 
 

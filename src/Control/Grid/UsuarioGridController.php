@@ -21,4 +21,9 @@ class UsuarioGridController extends BaseGridController
        return new UsuarioGrid();
     }
 
+    public function createInstanceQuery()
+    {
+        return $this->getRepository()->createQueryConsulta();
+    }
+
 }

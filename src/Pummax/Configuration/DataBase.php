@@ -4,7 +4,7 @@ namespace Pummax\Configuration;
 
 class DataBase
 {
-    const URL_SITE = "https://atletica-ceavi.herokuapp.com/";
+    const URL_SITE = "http://atleticaceavi.com.br/";
 
     public static function getConnectionConfiguration(){
         //Postgresql
@@ -16,13 +16,15 @@ class DataBase
             'host' => 'ec2-52-73-247-67.compute-1.amazonaws.com',
             'driver' => 'pdo_pgsql',
         );
-        //MySql
-//        $conn = array(
-//            'dbname' => 'atletica',
-//            'user' => 'root',
-//            'host' => 'localhost',
-//            'driver' => 'pdo_mysql',
-//        );
+        /*
+        //MySql - Exemplo
+        $conn = array(
+            'dbname' => 'atletica',
+            'user' => 'root',
+            'host' => 'localhost',
+            'driver' => 'pdo_mysql',
+        );
+        */
         return $conn;
     }
 

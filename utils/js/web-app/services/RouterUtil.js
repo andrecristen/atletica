@@ -35,7 +35,7 @@ service.factory('RouterUtil',  function() {
         //Tratativa para arquivos de File
         var files = $('input[type="file"]');
         angular.forEach(files, function (file, index) {
-            if(file.id && file.files){
+            if(file.id && file.files.length > 0){
                 dataPost.append(file.id, file.files[0], file.id);
             }
         });

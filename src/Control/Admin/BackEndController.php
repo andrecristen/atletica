@@ -21,7 +21,11 @@ class BackEndController extends BaseController
             if($usuario){
                 $this->setUserSession($usuario);
                 new Mensagem(Mensagem::TIPO_SUCESSO, 'Login realizado com sucesso.');
-                $this->redirectPage("admin");
+                if($this->getUserModelSession()->getTipo() == Usuario::TIPO_ALUNO){
+                    $this->redirectPage("index");
+                }else{
+                    $this->redirectPage("admin");
+                }
             }else{
                 new Mensagem(Mensagem::TIPO_ERRO, 'Não localizado usuário com informações solicitadas.');
                 $this->redirectPage("login");

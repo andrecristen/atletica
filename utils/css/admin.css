@@ -121,7 +121,7 @@ th {
 
 .logo-menu{
     background-color: #008FE2!important;
-    height: 54px!important;
+    height: 56px!important;
     padding-top: 12px!important;
 }
 
@@ -207,4 +207,8 @@ legend{
 
 fieldset .form-group{
     padding-left: 15px!important;
+}
+
+.select-pummax{
+    height: 38px!important;
 }

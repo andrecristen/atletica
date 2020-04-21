@@ -25,6 +25,8 @@ class UsuarioGrid extends AbstractGrid
 
     public function createActions()
     {
+        $this->addAction(new Action('Adicionar', 'addUsuario', 'far fa-plus-square'));
+        $this->addAction(new Action('Editar', 'editUsuario', 'far fa-edit','btn-success',true));
         $this->addAction(new Action('Visualizar', 'viewUsuario','fas fa-search' , 'btn-info',true));
     }
 }
