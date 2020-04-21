@@ -118,7 +118,7 @@ class Parceiro
      */
     public function getPorcentagemDesconto()
     {
-        return $this->porcentagemDesconto;
+        return (float)$this->porcentagemDesconto;
     }
 
     /**
