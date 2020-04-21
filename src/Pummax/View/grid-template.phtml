@@ -60,7 +60,7 @@
         <td style="text-align: center" class="grid-checkbox">
             <input type="checkbox" ng-model="rowsSelecteds[tab.router][$index].selected" ng-click="controller.selectRow($index, tab.router, row)">
         </td>
-        <td ng-repeat="column in columns[tab.router]">
+        <td nowrap ng-repeat="column in columns[tab.router]">
             <span ng-if="column.type == 'text' || column.type == 'date' || column.type == 'dateTime' ">
                 {{row[column.tableName+'_'+column.content]}}
             </span>
