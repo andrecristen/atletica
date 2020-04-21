@@ -119,6 +119,13 @@ class Imagem{
         $this->ativo = $ativo;
     }
 
+    public static function tipoList(){
+        return [
+          self::TIPO_BANNER => 'Banner',
+          self::TIPO_USUARIO => 'Usuario',
+          self::TIPO_PARCEIRO=> 'Parceiro',
+        ];
+    }
 }
 
 

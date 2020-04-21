@@ -80,10 +80,15 @@ class RouterDefine
                 'privilegio' => self::ADMIN_USER,
                 'title' => 'Incluir Banner'
             ],
-            '/editBanner' => [
-                'control' => 'Control::Form::BannerFormController.edit',
+            '/inativarBanner' => [
+                'control' => 'Control::Form::BannerFormController.inativar',
                 'privilegio' => self::ADMIN_USER,
-                'title' => 'Alterar Banner'
+                'title' => 'Inativar Banner'
+            ],
+            '/ativarBanner' => [
+                'control' => 'Control::Form::BannerFormController.ativar',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Ativar Banner'
             ],
             '/deleteBanner' => [
                 'control' => 'Control::Form::BannerFormController.delete',

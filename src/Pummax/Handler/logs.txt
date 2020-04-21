@@ -34,3 +34,19 @@ Argument 1 passed to Pummax\Controller\FilterGridController::__construct() must 
 #3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
 #4 {main}
 ----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 18:25:09
+   Usuário #1 - dev@dev.com.br
+Unsupported operand types-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Control\Form\BannerFormController->inativar()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#3 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #21/04/20 18:25:55
+   Usuário #1 - dev@dev.com.br
+Unsupported operand types-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Control\Form\BannerFormController->inativar()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#3 {main}
+----------------- FIM ------------------

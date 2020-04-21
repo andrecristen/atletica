@@ -47,6 +47,14 @@ abstract class BaseGridController extends BaseController
         $count = $queryCount->addSelect('count(1)')->getQuery()->getSingleScalarResult();
         $dataQuery = $query->setFirstResult($minLimit)->setMaxResults(self::PAGE_LIMIT);
         $results = $dataQuery->getQuery()->getScalarResult();
+        //Formata as datas
+        foreach ($results as $key => $result){
+            foreach ($result as $keyField =>$field){
+                if ($field instanceof \DateTime){
+                    $results[$key][$keyField] = $field->format('d/m/Y H:i');
+                }
+            }
+        }
         return new GridResponse($this->getView(), $results, $count);
     }
 

@@ -29,7 +29,6 @@ class CarteiraGrid extends AbstractGrid
         $this->addAction(new Action('Nova Carteira', 'addCarteira', 'far fa-plus-square','btn-primary'));
         $this->addAction(new Action('Editar', 'editCarteira', 'far fa-edit','btn-success',true));
         $this->addAction(new Action('Visualizar', 'viewCarteira','fas fa-search' , 'btn-info',true));
-        $this->addAction(new Action('Excluir', 'deleteCarteira', 'far fa-trash-alt', 'btn-danger', true));
     }
 
 }

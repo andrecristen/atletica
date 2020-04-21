@@ -34,9 +34,14 @@ class CarteiraFormController extends BaseFormController
             $cursoId = $cursoId['id'];
         }
         $curso = $this->getEntityManager()->getRepository(Curso::class)->find($cursoId);
+        $imagemController = new ImagemController();
         if($this->getModel()->getId()){
             $imagem = $this->getModel()->getImagem();
             $pessoa = $this->getModel()->getUsuario()->getPessoa();
+            $imagemNova = $imagemController->novaImagem('arquivo', Imagem::TIPO_USUARIO, true);
+            if($imagemNova){
+                $imagem = $imagemNova;
+            }
             $this->getFormBean()->beanModel($pessoa, $data['usuario']['pessoa']);
             $this->getEntityManager()->persist($pessoa);
             $this->getEntityManager()->flush($pessoa);
@@ -64,12 +69,11 @@ class CarteiraFormController extends BaseFormController
             $this->getEntityManager()->persist($usuario);
             $this->getModel()->setUsuario($usuario);
             //Nova imagem
-            $imagemController = new ImagemController();
             $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_USUARIO, true);
         }
         $this->getModel()->setImagem($imagem);
         $this->getModel()->setCurso($curso);
-
+        $this->getFormBean()->beanModel($this->getModel(), ['dataVencimento' => $data['dataVencimento']]);
         $this->getEntityManager()->persist($this->getModel());
         $this->getEntityManager()->flush();
     }

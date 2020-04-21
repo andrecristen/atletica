@@ -17,7 +17,8 @@ class ImagemController extends BaseController
         $fileType = $_FILES[$fileName]['type'];
         $ext = $this->getExtension($fileType);
         $date = new \DateTime();
-        $path = '/img/'.$date->format('dmYHis').$nomeAll.".".$ext;
+        $tipoName = Imagem::tipoList();
+        $path = '/img/'.$tipoName[$tipo].'/'.$date->format('dmYHis').$nomeAll.".".$ext;
         $target = __DIR__ .'/../../../utils'.$path;
         move_uploaded_file($nome, $target);
         $imagem = new Imagem();
