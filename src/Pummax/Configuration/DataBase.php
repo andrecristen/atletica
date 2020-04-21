@@ -4,7 +4,7 @@ namespace Pummax\Configuration;
 
 class DataBase
 {
-    const URL_SITE = "http://atleticaceavi.com.br/";
+    const URL_SITE = "https://atletica-ceavi.herokuapp.com/";
 
     public static function getConnectionConfiguration(){
         //Postgresql
