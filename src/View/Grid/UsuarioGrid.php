@@ -4,6 +4,7 @@
 namespace View\Grid;
 
 
+use Model\Pessoa;
 use Model\Usuario;
 use Pummax\View\Grid\AbstractGrid;
 use Pummax\View\Grid\Action;
@@ -21,6 +22,9 @@ class UsuarioGrid extends AbstractGrid
     {
         $this->addColumn(new Column('#', 'id', Column::TYPE_NUMBER, $this->getModelNameBase(),true, '5%'));
         $this->addColumn(new Column('Login', 'login', Column::TYPE_TEXT,$this->getModelNameBase(),true));
+        $this->addColumn(new Column('Nome', 'nome', Column::TYPE_TEXT, Pessoa::class,true, '20%'));
+        $this->addColumn(new Column('Sobrenome', 'sobrenome', Column::TYPE_TEXT, Pessoa::class,true, '40%'));
+        $this->addColumn(new Column('CPF', 'cpf', Column::TYPE_TEXT, Pessoa::class,true, '10%'));
     }
 
     public function createActions()

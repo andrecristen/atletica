@@ -28,6 +28,5 @@ class CursoGrid extends AbstractGrid
         $this->addAction(new Action('Adicionar', 'addCurso', 'far fa-plus-square'));
         $this->addAction(new Action('Editar', 'editCurso', 'far fa-edit','btn-success',true));
         $this->addAction(new Action('Visualizar', 'viewCurso','fas fa-search' , 'btn-info',true));
-        $this->addAction(new Action('Excluir', 'deleteCurso', 'far fa-trash-alt', 'btn-danger', true));
     }
 }

@@ -13,6 +13,8 @@ class UsuarioRepository extends BaseRepository
     public function createQueryConsulta()
     {
         $query = parent::createQueryConsulta();
+        $query->addSelect('Pessoa');
+        $query->join('Usuario.pessoa', 'Pessoa');
         $query->andWhere('Usuario.tipo = :admin');
         $query->setParameter('admin', Usuario::TIPO_ADMIN);
         return $query;
