@@ -10,7 +10,9 @@ use Model\Curso;
 use Model\Imagem;
 use Model\Pessoa;
 use Model\Usuario;
+use Pummax\Configuration\DataBase;
 use Pummax\Controller\BaseFormController;
+use Pummax\View\Email\Templates;
 use View\Form\CarteiraForm;
 
 class CarteiraFormController extends BaseFormController
@@ -35,6 +37,7 @@ class CarteiraFormController extends BaseFormController
         }
         $curso = $this->getEntityManager()->getRepository(Curso::class)->find($cursoId);
         $imagemController = new ImagemController();
+        $isAdd = false;
         if($this->getModel()->getId()){
             $imagem = $this->getModel()->getImagem();
             $pessoa = $this->getModel()->getUsuario()->getPessoa();
@@ -53,6 +56,7 @@ class CarteiraFormController extends BaseFormController
             $this->getModel()->setUsuario($usuario);
         }else{
             //Adicionando
+            $isAdd = true;
             //Nova Pessoa
             $pessoa = new Pessoa();
             $usuario = new Usuario();
@@ -76,6 +80,12 @@ class CarteiraFormController extends BaseFormController
         $this->getFormBean()->beanModel($this->getModel(), ['dataVencimento' => $data['dataVencimento']]);
         $this->getEntityManager()->persist($this->getModel());
         $this->getEntityManager()->flush();
+        if($isAdd){
+            $remetente = new \Pummax\Mail\Email('smtp.gmail.com', 587, 'tls','email', 'senha', DataBase::NOME_SISITEMA);
+            $email = new \Pummax\Mail\MessageEmail('Conta Criada '.DataBase::NOME_SISITEMA, Templates::criacaoConta($usuario->getPessoa()->getNome(), DataBase::NOME_SISITEMA, "Sua data de nascimento", DataBase::URL_SITE), $usuario->getLogin());
+            $sender = new \Pummax\Mail\SendEmail();
+            $sender->send($remetente, $email);
+        }
     }
 
 

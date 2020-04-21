@@ -6,6 +6,8 @@ class DataBase
 {
     const URL_SITE = "https://atletica-ceavi.herokuapp.com/";
 
+    const NOME_SISITEMA = 'Carteirinha Atlética Ceavi';
+
     public static function getConnectionConfiguration(){
         //Postgresql
         $conn = array(
