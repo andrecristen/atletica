@@ -63,6 +63,10 @@ class CarteiraForm extends AbstractForm
                     <label for="pessoa.dataNascimento">Data Nascimento</label>
                     <input ng-required="true" ng-model="data.usuario.pessoa.dataNascimento" type="date" class="form-control" id="pessoa.dataNascimento">
                 </div>
+                <div class="form-group">
+                    <label for="pessoa.matricula">Matricula</label>
+                    <input ng-required="true" ng-model="data.usuario.pessoa.matricula" type="text" class="form-control" id="pessoa.matricula">
+                </div>
             </div>
             </fieldset>
             <fieldset>
@@ -98,6 +102,7 @@ class CarteiraForm extends AbstractForm
                     'sobrenome',
                     'cpf',
                     'dataNascimento',
+                    'matricula',
                 ]
             ],
             'curso' => [

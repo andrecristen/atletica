@@ -32,6 +32,11 @@ class Pessoa
     protected $cpf;
 
     /**
+     * @Column(name="pes_matricula", type="string", nullable=true)
+     */
+    protected $matricula;
+
+    /**
      * @Column(name="pes_data_nascimento", type="date")
      */
     protected $dataNascimento;
@@ -98,6 +103,22 @@ class Pessoa
     public function setCpf($cpf)
     {
         $this->cpf = $cpf;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMatricula()
+    {
+        return $this->matricula;
+    }
+
+    /**
+     * @param mixed $matricula
+     */
+    public function setMatricula($matricula)
+    {
+        $this->matricula = $matricula;
     }
 
     /**
