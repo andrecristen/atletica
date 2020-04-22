@@ -9,6 +9,11 @@ use Pummax\View\BaseView;
 
 class LoginFormView extends BaseView
 {
+    public function __construct($createMenu = false, $createFooter = false)
+    {
+        parent::__construct($createMenu, $createFooter);
+    }
+
     public function createHtml()
     {
         $mensagemErro = Mensagem::getMessageErro();

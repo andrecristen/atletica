@@ -8,7 +8,7 @@ use Pummax\Controller\BaseController;
 
 abstract class BaseView extends BaseController
 {
-    public function __construct()
+    public function __construct($createMenu = true, $createFooter = true)
     {
         parent::__construct();
         ?>
@@ -28,13 +28,17 @@ abstract class BaseView extends BaseController
         </head>
         <body>
         <?php
-        Facilitador::createMenuSite();
+        if($createMenu){
+            Facilitador::createMenuSite();
+        }
         ?>
         <div style="margin-top: 80px;" class="container-fluid">
             <?php  $this->createHtml(); ?>
         </div>
         <?php
-        Facilitador::createFooterSite()
+        if($createFooter){
+            Facilitador::createFooterSite();
+        }
         ?>
         </body>
         </html>
