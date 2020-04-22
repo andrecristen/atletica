@@ -31,6 +31,14 @@ class RouterDefine
                 'control' => 'Control::Site::FrontEndController.about',
                 'privilegio' => self::ALL_USER,
             ],
+            '/profile' => [
+                'control' => 'Control::Site::FrontEndController.profile',
+                'privilegio' => self::ALL_USER,
+            ],
+            '/carterinha' => [
+                'control' => 'Control::Site::FrontEndController.carterinha',
+                'privilegio' => self::ALL_USER,
+            ],
             //----------Base Admin
             '/admin' => [
                 'control' => 'Control::Admin::AdminController.run',

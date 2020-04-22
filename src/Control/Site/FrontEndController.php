@@ -6,8 +6,10 @@ namespace Control\Site;
 
 use Pummax\Controller\BaseController;
 
+use View\Site\FrontEndCarteirinha;
 use View\Site\FrontEndIndexView;
 use View\Site\FrontEndAbout;
+use View\Site\FrontEndProfile;
 
 class FrontEndController extends BaseController
 {
@@ -19,5 +21,14 @@ class FrontEndController extends BaseController
     public function about(){
         return new FrontEndAbout();
     }
+
+    public function profile(){
+        return new FrontEndProfile();
+    }
+
+    public function carterinha(){
+        return new FrontEndCarteirinha();
+    }
+
 
 }

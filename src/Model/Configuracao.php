@@ -14,6 +14,7 @@ class Configuracao
     const TIPO_EMAIL = 1;
     const TIPO_BANNER = 2;
     const TIPO_PRECO = 3;
+    const TIPO_TEXTOS_SITE = 4;
 
     /**
      * @Id
@@ -86,6 +87,7 @@ class Configuracao
             self::TIPO_EMAIL => 'E-mail',
             self::TIPO_BANNER => 'Banner',
             self::TIPO_PRECO => 'Preço',
+            self::TIPO_TEXTOS_SITE => 'Textos Site',
         ];
     }
 
