@@ -41,6 +41,15 @@ abstract class BaseView extends BaseController
         }
         ?>
         </body>
+        <style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
         </html>
         <?php
     }
