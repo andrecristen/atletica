@@ -167,7 +167,6 @@ class FormBean extends BaseController
                     $value = str_replace('/', '-', $value);
                     //Javascript manda um dia a mais
                     $value = new \DateTime($value);
-                    $value->modify('-1 day');
                 }
                 break;
             case \Doctrine\DBAL\Types\Type::BOOLEAN:
