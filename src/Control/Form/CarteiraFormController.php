@@ -6,6 +6,7 @@ namespace Control\Form;
 
 use Control\Admin\ImagemController;
 use Model\Carteira;
+use Model\Configuracao;
 use Model\Curso;
 use Model\Imagem;
 use Model\Pessoa;
@@ -81,11 +82,27 @@ class CarteiraFormController extends BaseFormController
         $this->getEntityManager()->persist($this->getModel());
         $this->getEntityManager()->flush();
         if($isAdd){
-            $remetente = new \Pummax\Mail\Email('smtp.gmail.com', 587, 'tls','email', 'senha', DataBase::NOME_SISTEMA);
-            $email = new \Pummax\Mail\MessageEmail('Conta Criada '.DataBase::NOME_SISTEMA, Templates::criacaoConta($usuario->getPessoa()->getNome(), DataBase::NOME_SISTEMA, "Sua data de nascimento", DataBase::URL_SITE), $usuario->getLogin());
-            $sender = new \Pummax\Mail\SendEmail();
-            $sender->send($remetente, $email);
+            $this->enviaEmail($usuario);
         }
+    }
+
+    /**
+     * Quando uma nova conta é criada envia o email para ela.
+     *
+     * @param Usuario $usuario
+     * @throws \Exception
+     */
+    private function enviaEmail(Usuario $usuario){
+        /** @var $configuracao Configuracao*/
+        $configuracao = $this->getEntityManager()->getRepository(Configuracao::class)->findOneBy(['tipo' => Configuracao::TIPO_EMAIL]);
+        if(!$configuracao){
+            throw new \Exception("Não localizado configuração do tipo E-mail para envio. Por favor certifique-se de configurar antes.");
+        }
+        $configuracaoModel = $configuracao->getConfiguracaoModel();
+        $remetente = new \Pummax\Mail\Email($configuracaoModel->getHost(), $configuracaoModel->getPort(), $configuracaoModel->getSmtpSecure(),$configuracaoModel->getUsername(), $configuracaoModel->getSenha(), $configuracaoModel->getFromName());
+        $email = new \Pummax\Mail\MessageEmail('Conta Criada '.DataBase::NOME_SISTEMA, Templates::criacaoConta($usuario->getPessoa()->getNome(), DataBase::NOME_SISTEMA, "Sua data de nascimento", DataBase::URL_SITE), $usuario->getLogin());
+        $sender = new \Pummax\Mail\SendEmail();
+        $sender->send($remetente, $email);
     }
 
 

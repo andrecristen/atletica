@@ -4,6 +4,8 @@
 namespace Model;
 
 
+use Model\LeituraConfiguracao\ConfiguracaoEmail;
+
 /**
  * @Entity(repositoryClass="Repository\ConfiguracaoRepository")
  * @Table(name="configuracoes")
@@ -89,6 +91,17 @@ class Configuracao
             self::TIPO_PRECO => 'Preço',
             self::TIPO_TEXTOS_SITE => 'Textos Site',
         ];
+    }
+
+    public function getConfiguracaoModel(){
+        switch ($this->getTipo()){
+            case self::TIPO_EMAIL:
+                return new ConfiguracaoEmail($this);
+                break;
+            default:
+                return null;
+                break;
+        }
     }
 
 }
