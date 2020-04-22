@@ -8,13 +8,27 @@ use Model\Imagem;
 
 class ImagemController extends BaseController
 {
-    public function novaImagem($fileName, $tipo = Imagem::TIPO_USUARIO, $persist = true){
+    public function novaImagem($fileName, $tipo = Imagem::TIPO_USUARIO, $persist = true, $altura = null, $largura = null){
         if(!isset($_FILES[$fileName])){
             return null;
         }
         $nome = $_FILES[$fileName]['tmp_name'];
         if(!$nome){
             return null;
+        }
+        if($altura && $largura){
+            $valid = true;
+            $fileinfo = @getimagesize ($nome);
+
+            if(abs($fileinfo[0] - $largura) > 20){
+                $valid = false;
+            }
+            if(abs($fileinfo[1] - $altura) > 20){
+                $valid = false;
+            }
+            if(!$valid){
+                throw new \Exception("A imagem deve possuir a dimensão ".$largura."X".$altura);
+            }
         }
         $nomeAll = $_FILES[$fileName]['name'];
         $fileType = $_FILES[$fileName]['type'];

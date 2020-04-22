@@ -5,6 +5,7 @@ namespace Model;
 
 
 use Model\LeituraConfiguracao\ConfiguracaoEmail;
+use Model\LeituraConfiguracao\ConfiguracaoImagem;
 
 /**
  * @Entity(repositoryClass="Repository\ConfiguracaoRepository")
@@ -97,6 +98,9 @@ class Configuracao
         switch ($this->getTipo()){
             case self::TIPO_EMAIL:
                 return new ConfiguracaoEmail($this);
+                break;
+             case self::TIPO_IMAGEM:
+                return new ConfiguracaoImagem($this);
                 break;
             default:
                 return null;

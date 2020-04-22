@@ -39,10 +39,20 @@ class CarteiraFormController extends BaseFormController
         $curso = $this->getEntityManager()->getRepository(Curso::class)->find($cursoId);
         $imagemController = new ImagemController();
         $isAdd = false;
+        /** @var $configuracao Configuracao*/
+        $configuracao = $this->getEntityManager()->getRepository(Configuracao::class)->findOneBy(['tipo' => Configuracao::TIPO_IMAGEM]);
+        if(!$configuracao){
+            $altura = null;
+            $largura = null;
+        }else{
+            $configuracaoModel = $configuracao->getConfiguracaoModel();
+            $altura = $configuracaoModel->getAlturaCarteira();
+            $largura = $configuracaoModel->getLarguraCarteira();
+        }
         if($this->getModel()->getId()){
             $imagem = $this->getModel()->getImagem();
             $pessoa = $this->getModel()->getUsuario()->getPessoa();
-            $imagemNova = $imagemController->novaImagem('arquivo', Imagem::TIPO_USUARIO, true);
+            $imagemNova = $imagemController->novaImagem('arquivo', Imagem::TIPO_USUARIO, true, $altura, $largura);
             if($imagemNova){
                 $imagem = $imagemNova;
             }
@@ -74,7 +84,7 @@ class CarteiraFormController extends BaseFormController
             $this->getEntityManager()->persist($usuario);
             $this->getModel()->setUsuario($usuario);
             //Nova imagem
-            $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_USUARIO, true);
+            $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_USUARIO, true, $altura, $largura);
         }
         $this->getModel()->setImagem($imagem);
         $this->getModel()->setCurso($curso);

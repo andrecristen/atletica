@@ -5,6 +5,7 @@ namespace Control\Form;
 
 
 use Control\Admin\ImagemController;
+use Model\Configuracao;
 use Model\Imagem;
 use Pummax\Controller\BaseFormController;
 use Pummax\Response\MessageResponse;
@@ -76,9 +77,19 @@ class BannerFormController extends BaseFormController
 
     protected function beanPost()
     {
+        /** @var $configuracao Configuracao*/
+        $configuracao = $this->getEntityManager()->getRepository(Configuracao::class)->findOneBy(['tipo' => Configuracao::TIPO_IMAGEM]);
+        if(!$configuracao){
+            $altura = null;
+            $largura = null;
+        }else{
+            $configuracaoModel = $configuracao->getConfiguracaoModel();
+            $altura = $configuracaoModel->getAlturaBanner();
+            $largura = $configuracaoModel->getLarguraBanner();
+        }
         $data = $this->getFormData();
         $imagemController = new ImagemController();
-        $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_BANNER);
+        $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_BANNER, true, $altura, $largura);
         $imagem->setNome($data['nome']);
         $imagem->setTitulo($data['titulo']);
         $this->setModel($imagem);

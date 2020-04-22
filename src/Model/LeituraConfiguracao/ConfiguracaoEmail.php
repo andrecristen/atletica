@@ -10,27 +10,33 @@ namespace Model\LeituraConfiguracao;
  */
 class ConfiguracaoEmail extends BaseConfiguracao
 {
-    public function getHost(){
+    public function getHost()
+    {
         return $this->getDataValue('host');
     }
 
-    public function getPort(){
+    public function getPort()
+    {
         return $this->getDataValue('port');
     }
 
-    public function getSmtpSecure(){
+    public function getSmtpSecure()
+    {
         return $this->getDataValue('smtpSecure');
     }
 
-    public function getUsername(){
+    public function getUsername()
+    {
         return $this->getDataValue('username');
     }
 
-    public function getSenha(){
+    public function getSenha()
+    {
         return $this->getDataValue('senha');
     }
 
-    public function getFromName(){
+    public function getFromName()
+    {
         return $this->getDataValue('fromName');
     }
 
