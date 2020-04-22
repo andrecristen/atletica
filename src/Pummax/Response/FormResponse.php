@@ -33,6 +33,7 @@ class FormResponse extends BaseResponse
                 $this->data['params'][$key] = $value;
             }
         }
+        $this->data['params']['isEdit'] = $view->isEdit();
         $buttonsArray = [];
         foreach ($buttons as $button){
             $buttonsArray[] = $button->getArrayFormat();

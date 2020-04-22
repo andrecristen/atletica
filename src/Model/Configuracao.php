@@ -24,7 +24,7 @@ class Configuracao
     protected $id;
 
     /**
-     * @Column(name="conf_tipo", type="smallint")
+     * @Column(name="conf_tipo", type="smallint", unique=true)
      */
     protected $tipo;
 

@@ -88,6 +88,7 @@ abstract class BaseFormController extends BaseController
             $data['params'] = $this->getData();
             $this->loadModelByKeys($this->getRow(), $this->getModel());
             $data['form'] = $this->beanForm();
+            $this->getView()->setIsEdit(true);
             return new FormResponse($this->getView(), $this->getView()->getButtons(), $data);
         }
     }

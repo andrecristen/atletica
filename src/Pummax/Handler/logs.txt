@@ -151,3 +151,41 @@ Call to a member function createQueryConsulta() on null-#0 C:\Bitnami\wappstack-
 #3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
 #4 {main}
 ----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #22/04/20 01:05:40
+   Usuário #6 - dev@dev.com.br
+Call to undefined function Control\Grid\ConfiguracaoGrid()-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(65): Control\Grid\ConfiguracaoGridController->instanceView()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\ContainerController.php(11): Pummax\Controller\BaseGridController->__construct()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(52): Pummax\Controller\ContainerController::newController('Control::Grid::...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #22/04/20 01:10:10
+   Usuário #6 - dev@dev.com.br
+Call to undefined function Control\Grid\ConfiguracaoGrid()-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(65): Control\Grid\ConfiguracaoGridController->instanceView()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\ContainerController.php(11): Pummax\Controller\BaseGridController->__construct()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(52): Pummax\Controller\ContainerController::newController('Control::Grid::...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #22/04/20 01:11:10
+   Usuário #6 - dev@dev.com.br
+Call to undefined function Control\Grid\ConfiguracaoGrid()-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseGridController.php(65): Control\Grid\ConfiguracaoGridController->instanceView()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\ContainerController.php(11): Pummax\Controller\BaseGridController->__construct()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(52): Pummax\Controller\ContainerController::newController('Control::Grid::...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#5 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #22/04/20 01:11:20
+   Usuário #6 - dev@dev.com.br
+Call to a member function getButtons() on null-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseFormController->add()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#3 {main}
+----------------- FIM ------------------

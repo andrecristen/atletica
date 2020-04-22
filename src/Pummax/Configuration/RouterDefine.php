@@ -193,6 +193,21 @@ class RouterDefine
                 'privilegio' => self::ADMIN_USER,
                 'title' => 'Ativar Parceiro'
             ],
+            '/configuracoes' => [
+                'control' => 'Control::Grid::ConfiguracaoGridController.index',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Configurações'
+            ],
+            '/addConfiguracao' => [
+                'control' => 'Control::Form::ConfiguracaoFormController.add',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Adicionar Configuração'
+            ],
+            '/editConfiguracao' => [
+                'control' => 'Control::Form::ConfiguracaoFormController.edit',
+                'privilegio' => self::ADMIN_USER,
+                'title' => 'Alterar Configuração'
+            ],
         );
     }
 }

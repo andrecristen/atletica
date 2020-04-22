@@ -67,6 +67,9 @@
             <span ng-if="column.type == 'number'">
                 {{row[column.tableName+'_'+column.content] | number }}
             </span>
+            <span ng-if="column.type == 'list'">
+                {{column.list[row[column.tableName+'_'+column.content]]}}
+            </span>
             <span ng-if="column.type == 'boolean'">
                 <span ng-if="row[column.tableName+'_'+column.content] == true">
                     Sim

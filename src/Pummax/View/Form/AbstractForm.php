@@ -11,6 +11,8 @@ abstract class AbstractForm extends BaseController
 
     protected $isView;
 
+    protected $isEdit;
+
     protected $html;
 
     protected $dataMappingArray;
@@ -73,6 +75,22 @@ abstract class AbstractForm extends BaseController
     public function setIsView($isView)
     {
         $this->isView = $isView;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function isEdit()
+    {
+        return $this->isEdit;
+    }
+
+    /**
+     * @param mixed $isEdit
+     */
+    public function setIsEdit($isEdit)
+    {
+        $this->isEdit = $isEdit;
     }
 
     /**
