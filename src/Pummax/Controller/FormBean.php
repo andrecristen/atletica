@@ -165,7 +165,6 @@ class FormBean extends BaseController
             case \Doctrine\DBAL\Types\Type::DATE:
                 if(!($value instanceof \DateTime)){
                     $value = str_replace('/', '-', $value);
-                    //Javascript manda um dia a mais
                     $value = new \DateTime($value);
                 }
                 break;
@@ -228,8 +227,6 @@ class FormBean extends BaseController
                 $name = $mapping;
                 $value = PummaxReflection::callGetter($model, $mapping);
                 if($value instanceof \DateTime){
-                    //Javascript precisa de uma dia a mais
-                    $value->modify('+1 day');
                     $value = [
                         'type' => 'date',
                         'value' => $value->format(\DateTime::W3C)
