@@ -34,7 +34,7 @@ class Parceiro
     protected $nome;
 
     /**
-     * @Column(name="par_porcentagem_desconto", type="decimal")
+     * @Column(name="par_porcentagem_desconto", type="string")
      */
     protected $porcentagemDesconto;
 
@@ -118,7 +118,7 @@ class Parceiro
      */
     public function getPorcentagemDesconto()
     {
-        return (float)$this->porcentagemDesconto;
+        return $this->porcentagemDesconto;
     }
 
     /**

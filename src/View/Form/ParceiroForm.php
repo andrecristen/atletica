@@ -25,8 +25,8 @@ class ParceiroForm extends AbstractForm
                     <input ng-required="true" ng-model="data.nome" type="text" class="form-control" id="nome" >
                 </div>
                 <div class="form-group">
-                    <label for="porcentagemDesconto">% Desconto</label>
-                    <input ng-required="true" ng-model="data.porcentagemDesconto" type="number" class="form-control" id="porcentagemDesconto" >
+                    <label for="porcentagemDesconto">Descontos</label>
+                    <input ng-required="true" ng-model="data.porcentagemDesconto" type="text" class="form-control" id="porcentagemDesconto" >
                 </div>
                 <div class="form-group">
                     <label for="cnpj">CNPJ</label>
