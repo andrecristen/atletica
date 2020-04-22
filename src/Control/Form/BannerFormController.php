@@ -80,6 +80,7 @@ class BannerFormController extends BaseFormController
         $imagemController = new ImagemController();
         $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_BANNER);
         $imagem->setNome($data['nome']);
+        $imagem->setTitulo($data['titulo']);
         $this->setModel($imagem);
     }
 

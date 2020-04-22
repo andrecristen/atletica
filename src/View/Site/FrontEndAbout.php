@@ -10,6 +10,6 @@ class FrontEndAbout extends BaseView
 
     public function createHtml()
     {
-        Facilitador::createMenuSite();
+
     }
 }

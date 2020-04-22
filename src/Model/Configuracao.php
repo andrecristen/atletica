@@ -11,6 +11,10 @@ namespace Model;
 class Configuracao
 {
 
+    const TIPO_EMAIL = 1;
+    const TIPO_BANNER = 2;
+    const TIPO_PRECO = 3;
+
     /**
      * @Id
      * @Column(name="conf_id", type="integer")
@@ -75,6 +79,14 @@ class Configuracao
     public function setConfiguracao($configuracao)
     {
         $this->configuracao = $configuracao;
+    }
+
+    public static function getTipoList(){
+        return [
+            self::TIPO_EMAIL => 'E-mail',
+            self::TIPO_BANNER => 'Banner',
+            self::TIPO_PRECO => 'Preço',
+        ];
     }
 
 }

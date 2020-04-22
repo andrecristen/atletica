@@ -30,6 +30,10 @@ class MenuDefine
                 'router' => 'parceiros',
                 'icon' => 'fas fa-handshake'
             ],
+            'Configurações' => [
+                'router' => 'configuracoes',
+                'icon' => 'fas fa-cogs'
+            ],
         ];
     }
 

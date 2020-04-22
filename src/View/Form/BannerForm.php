@@ -17,12 +17,16 @@ class BannerForm extends AbstractForm
                 <input ng-required="true" ng-model="data.id" type="number" ng-disabled="true" class="form-control" id="id" >
             </div>
             <div class="form-group">
-                <label for="arquivo">Arquivo</label>
-                <input ng-required="true" ng-model="data.arquivo" type="file" class="form-control" id="arquivo" >
-            </div>
-            <div class="form-group">
                 <label for="nome">Nome</label>
                 <input ng-required="true" ng-model="data.nome" type="text" class="form-control" id="nome" >
+            </div>
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input ng-required="true" ng-model="data.titulo" type="text" class="form-control" id="titulo" >
+            </div>
+            <div class="form-group">
+                <label for="arquivo">Arquivo</label>
+                <input ng-required="true" ng-model="data.arquivo" type="file" class="form-control" id="arquivo" >
             </div>
         </div>';
     }

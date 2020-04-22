@@ -14,23 +14,42 @@ class FrontEndIndexView extends BaseView
 
     public function createHtml()
     {
+        /** @var $banners Imagem[]*/
+        $banners = $this->getEntityManager()->getRepository(Imagem::class)->findBy(['tipo' => Imagem::TIPO_BANNER, 'ativo' => true]);
         ?>
-       <?php Facilitador::createMenuSite() ?>
-        <main style="margin-top: 75px" role="main" class="container">
-            <div style="margin: 20px;" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <?php foreach ($banners as $key => $banner){
+                    $active = '';
+                    if($key == 0){
+                        $active = ' class="active" ';
+                    }
+                    echo '<li data-target="#item" data-slide-to="'.$key.'" '.$active.'></li>';
+                } ?>
+            </ol>
+            <div class="carousel-inner">
+                <?php foreach ($banners as $key => $banner){
+                    $active = '';
+                    if($key == 0){
+                        $active = ' active';
+                    }
+                    echo '<div class="carousel-item '.$active.'">
+                            <img class="d-block w-100" src="utils/'.$banner->getPatch().'" alt="'.$banner->getTitulo().'">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>'.$banner->getTitulo().'</p>
+                            </div>
+                         </div>';
+                } ?>
             </div>
-        </main>
-       <?php Facilitador::createFooterSite() ?>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
         <?php
     }
 

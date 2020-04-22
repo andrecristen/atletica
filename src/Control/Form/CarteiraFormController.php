@@ -81,8 +81,8 @@ class CarteiraFormController extends BaseFormController
         $this->getEntityManager()->persist($this->getModel());
         $this->getEntityManager()->flush();
         if($isAdd){
-            $remetente = new \Pummax\Mail\Email('smtp.gmail.com', 587, 'tls','email', 'senha', DataBase::NOME_SISITEMA);
-            $email = new \Pummax\Mail\MessageEmail('Conta Criada '.DataBase::NOME_SISITEMA, Templates::criacaoConta($usuario->getPessoa()->getNome(), DataBase::NOME_SISITEMA, "Sua data de nascimento", DataBase::URL_SITE), $usuario->getLogin());
+            $remetente = new \Pummax\Mail\Email('smtp.gmail.com', 587, 'tls','email', 'senha', DataBase::NOME_SISTEMA);
+            $email = new \Pummax\Mail\MessageEmail('Conta Criada '.DataBase::NOME_SISTEMA, Templates::criacaoConta($usuario->getPessoa()->getNome(), DataBase::NOME_SISTEMA, "Sua data de nascimento", DataBase::URL_SITE), $usuario->getLogin());
             $sender = new \Pummax\Mail\SendEmail();
             $sender->send($remetente, $email);
         }
