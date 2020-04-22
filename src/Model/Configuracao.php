@@ -12,7 +12,7 @@ class Configuracao
 {
 
     const TIPO_EMAIL = 1;
-    const TIPO_BANNER = 2;
+    const TIPO_IMAGEM = 2;
     const TIPO_PRECO = 3;
     const TIPO_TEXTOS_SITE = 4;
 
@@ -85,7 +85,7 @@ class Configuracao
     public static function getTipoList(){
         return [
             self::TIPO_EMAIL => 'E-mail',
-            self::TIPO_BANNER => 'Banner',
+            self::TIPO_IMAGEM => 'Imagens',
             self::TIPO_PRECO => 'Preço',
             self::TIPO_TEXTOS_SITE => 'Textos Site',
         ];

@@ -15,11 +15,9 @@ class ConfiguracaoForm extends AbstractForm
         $this->setMaximized(true);
         $this->addScopeData('tipoList', Configuracao::getTipoList());
         $this->addScopeData('TIPO_EMAIL', Configuracao::TIPO_EMAIL);
-        $this->addScopeData('TIPO_BANNER', Configuracao::TIPO_BANNER);
+        $this->addScopeData('TIPO_IMAGEM', Configuracao::TIPO_IMAGEM);
         $this->addScopeData('TIPO_PRECO', Configuracao::TIPO_PRECO);
         $this->addScopeData('TIPO_TEXTOS_SITE', Configuracao::TIPO_TEXTOS_SITE);
-
-        $remetente = new \Pummax\Mail\Email('smtp.gmail.com', 587, 'tls','andrecristenibirama@gmail.com', 'senhasegura', 'Atletica');
     }
 
     public function createHtml()
@@ -57,16 +55,30 @@ class ConfiguracaoForm extends AbstractForm
                                 <input ng-required="true" ng-model="data.configuracao[\'fromName\']" type="text" class="form-control" id="fromName" >
                             </div>
                         </div>
-                        <!-- Banner -->
-                        <div ng-if="data.tipo == TIPO_BANNER">
-                            <div class="form-group">
-                                <label for="altura">Altura</label>
-                                <input ng-required="true" ng-model="data.configuracao[\'altura\']" type="number" class="form-control" id="altura" >
-                            </div>
-                            <div class="form-group">
-                                <label for="largura">Largura</label>
-                                <input ng-required="true" ng-model="data.configuracao[\'largura\']" type="number" class="form-control" id="largura" >        
-                            </div>
+                        <!-- Imagem -->
+                        <div ng-if="data.tipo == TIPO_IMAGEM">
+                            <fieldset>
+                                <legend>Banner</legend>
+                                <div class="form-group">
+                                    <label for="alturabanner">Altura</label>
+                                    <input ng-required="true" ng-model="data.configuracao[\'alturaBanner\']" type="number" class="form-control" id="alturabanner" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="largurabanner">Largura</label>
+                                    <input ng-required="true" ng-model="data.configuracao[\'larguraBanner\']" type="number" class="form-control" id="largurabanner" >        
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Carteira</legend>
+                                <div class="form-group">
+                                    <label for="alturacarteira">Altura</label>
+                                    <input ng-required="true" ng-model="data.configuracao[\'alturaCarteira\']" type="number" class="form-control" id="alturacarteira" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="larguracarteira">Largura</label>
+                                    <input ng-required="true" ng-model="data.configuracao[\'larguraCarteira\']" type="number" class="form-control" id="larguracarteira" >        
+                                </div>
+                            </fieldset>
                         </div>
                         <!-- Preço -->
                         <div ng-if="data.tipo == TIPO_PRECO">
