@@ -5,6 +5,7 @@ namespace Control\Form;
 
 
 use Control\Admin\ImagemController;
+use Model\Configuracao;
 use Model\Endereco;
 use Model\Imagem;
 use Model\Parceiro;
@@ -78,16 +79,26 @@ class ParceiroFormController extends BaseFormController
     {
         $data = $this->getFormData();
         $imagemController = new ImagemController();
+        /** @var $configuracao Configuracao*/
+        $configuracao = $this->getEntityManager()->getRepository(Configuracao::class)->findOneBy(['tipo' => Configuracao::TIPO_IMAGEM]);
+        if(!$configuracao){
+            $altura = null;
+            $largura = null;
+        }else{
+            $configuracaoModel = $configuracao->getConfiguracaoModel();
+            $altura = $configuracaoModel->getAlturaParceiro();
+            $largura = $configuracaoModel->getLarguraParceiro();
+        }
         if($this->getModel()->getId()){
             $endereco = $this->getModel()->getEndereco();
             $imagem = $this->getModel()->getImagem();
-            $imagemNova = $imagemController->novaImagem('arquivo', Imagem::TIPO_PARCEIRO, true);
+            $imagemNova = $imagemController->novaImagem('arquivo', Imagem::TIPO_PARCEIRO, true, $altura, $largura);
             if($imagemNova){
                 $imagem = $imagemNova;
             }
         }else{
             $endereco = new Endereco();
-            $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_PARCEIRO, true);
+            $imagem = $imagemController->novaImagem('arquivo', Imagem::TIPO_PARCEIRO, true, $altura, $largura);
         }
         $this->getFormBean()->beanModel($endereco, $data['endereco']);
         $this->getEntityManager()->persist($endereco);

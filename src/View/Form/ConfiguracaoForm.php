@@ -79,6 +79,17 @@ class ConfiguracaoForm extends AbstractForm
                                     <input ng-required="true" ng-model="data.configuracao[\'larguraCarteira\']" type="number" class="form-control" id="larguracarteira" >        
                                 </div>
                             </fieldset>
+                            <fieldset>
+                                <legend>Parceiro</legend>
+                                <div class="form-group">
+                                    <label for="alturaparceiro">Altura</label>
+                                    <input ng-required="true" ng-model="data.configuracao[\'alturaParceiro\']" type="number" class="form-control" id="alturaparceiro" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="larguraparceiro">Largura</label>
+                                    <input ng-required="true" ng-model="data.configuracao[\'larguraParceiro\']" type="number" class="form-control" id="larguraparceiro" >        
+                                </div>
+                            </fieldset>
                         </div>
                         <!-- Preço -->
                         <div ng-if="data.tipo == TIPO_PRECO">

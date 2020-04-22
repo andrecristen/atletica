@@ -30,4 +30,14 @@ class ConfiguracaoImagem extends BaseConfiguracao
         return $this->getDataValue('larguraCarteira');
     }
 
+    public function getAlturaParceiro()
+    {
+        return $this->getDataValue('alturaParceiro');
+    }
+
+    public function getLarguraParceiro()
+    {
+        return $this->getDataValue('larguraParceiro');
+    }
+
 }

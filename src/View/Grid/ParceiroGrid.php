@@ -21,7 +21,7 @@ class ParceiroGrid extends AbstractGrid
         $this->addColumn(new Column('#', 'id', Column::TYPE_NUMBER, $this->getModelNameBase(),true, '5%'));
         $this->addColumn(new Column('CNPJ', 'cnpj', Column::TYPE_TEXT, $this->getModelNameBase(),true));
         $this->addColumn(new Column('Nome', 'nome', Column::TYPE_TEXT, $this->getModelNameBase(),true));
-        $this->addColumn(new Column('Desconto', 'porcentagemDesconto', Column::TYPE_NUMBER, $this->getModelNameBase(),true));
+        $this->addColumn(new Column('Desconto', 'porcentagemDesconto', Column::TYPE_TEXT, $this->getModelNameBase(),true));
         $this->addColumn(new Column('Ativo', 'ativo', Column::TYPE_BOOLEAN, $this->getModelNameBase(),true));
     }
 
