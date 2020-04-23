@@ -9,6 +9,7 @@ use Pummax\Controller\BaseController;
 use View\Site\FrontEndCarteirinha;
 use View\Site\FrontEndIndexView;
 use View\Site\FrontEndAbout;
+use View\Site\FrontEndParceiros;
 use View\Site\FrontEndProfile;
 
 class FrontEndController extends BaseController
@@ -28,6 +29,10 @@ class FrontEndController extends BaseController
 
     public function carterinha(){
         return new FrontEndCarteirinha();
+    }
+
+    public function parceiros(){
+        return new FrontEndParceiros();
     }
 
 

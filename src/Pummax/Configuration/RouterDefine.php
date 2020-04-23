@@ -39,6 +39,10 @@ class RouterDefine
                 'control' => 'Control::Site::FrontEndController.carterinha',
                 'privilegio' => self::ALL_USER,
             ],
+            '/partner' => [
+                'control' => 'Control::Site::FrontEndController.parceiros',
+                'privilegio' => self::ALL_USER,
+            ],
             //----------Base Admin
             '/admin' => [
                 'control' => 'Control::Admin::AdminController.run',
