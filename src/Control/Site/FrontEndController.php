@@ -27,7 +27,7 @@ class FrontEndController extends BaseController
         return new FrontEndProfile();
     }
 
-    public function carterinha(){
+    public function carteira(){
         return new FrontEndCarteirinha();
     }
 

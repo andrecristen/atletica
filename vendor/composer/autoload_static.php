@@ -13,6 +13,11 @@ class ComposerStaticInit9ddb7974042b0394761e76e18767796c
     );
 
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'chillerlan\\Settings\\' => 20,
+            'chillerlan\\QRCode\\' => 18,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php73\\' => 23,
@@ -42,6 +47,14 @@ class ComposerStaticInit9ddb7974042b0394761e76e18767796c
     );
 
     public static $prefixDirsPsr4 = array (
+        'chillerlan\\Settings\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chillerlan/php-settings-container/src',
+        ),
+        'chillerlan\\QRCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chillerlan/php-qrcode/src',
+        ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php73',

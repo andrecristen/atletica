@@ -35,8 +35,8 @@ class RouterDefine
                 'control' => 'Control::Site::FrontEndController.profile',
                 'privilegio' => self::ALL_USER,
             ],
-            '/carterinha' => [
-                'control' => 'Control::Site::FrontEndController.carterinha',
+            '/carteira' => [
+                'control' => 'Control::Site::FrontEndController.carteira',
                 'privilegio' => self::ALL_USER,
             ],
             '/partner' => [

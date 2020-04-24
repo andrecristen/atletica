@@ -1,0 +1,46 @@
+---------------- INICIO ---------------- 
+   Data/Hora #23/04/20 21:31:47
+   Usuário #6 - dev@dev.com.br
+Call to undefined method DoctrineProxies\__CG__\Model\Pessoa::getCfp()-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\View\BaseView.php(37): View\Site\FrontEndCarteirinha->createHtml()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\View\Site\FrontEndCarteirinha.php(15): Pummax\View\BaseView->__construct(true, false)
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Site\FrontEndController.php(31): View\Site\FrontEndCarteirinha->__construct()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Control\Site\FrontEndController->carteira()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#5 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#6 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #23/04/20 21:34:24
+   Usuário #6 - dev@dev.com.br
+syntax error, unexpected end of file-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('C:\\Bitnami\\wapp...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('View\\Site\\Front...')
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Site\FrontEndController.php(31): spl_autoload_call('View\\Site\\Front...')
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Control\Site\FrontEndController->carteira()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#5 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#6 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #23/04/20 21:35:50
+   Usuário #6 - dev@dev.com.br
+Erro no envio do e-mail: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Form\CarteiraFormController.php(115): Pummax\Mail\SendEmail->send(Object(Pummax\Mail\Email), Object(Pummax\Mail\MessageEmail))
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Form\CarteiraFormController.php(95): Control\Form\CarteiraFormController->enviaEmail(Object(Model\Usuario))
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(175): Control\Form\CarteiraFormController->beanModel()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(65): Pummax\Controller\BaseFormController->beanPost()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\BaseFormController.php(46): Pummax\Controller\BaseFormController->addPost()
+#5 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Pummax\Controller\BaseFormController->add()
+#6 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#7 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#8 {main}
+----------------- FIM ------------------
+---------------- INICIO ---------------- 
+   Data/Hora #23/04/20 22:07:02
+   Usuário #23 - joana@gmail.com
+Class 'QRcode' not found-#0 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\View\BaseView.php(37): View\Site\FrontEndCarteirinha->createHtml()
+#1 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\View\Site\FrontEndCarteirinha.php(17): Pummax\View\BaseView->__construct(true, false)
+#2 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Control\Site\FrontEndController.php(31): View\Site\FrontEndCarteirinha->__construct()
+#3 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(56): Control\Site\FrontEndController->carteira()
+#4 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\src\Pummax\Controller\RouterController.php(20): Pummax\Controller\RouterController->run()
+#5 C:\Bitnami\wappstack-7.3.15-2\apache2\htdocs\atletica\index.php(4): Pummax\Controller\RouterController->__construct()
+#6 {main}
+----------------- FIM ------------------
