@@ -26,12 +26,12 @@ class FrontEndCarteirinha extends BaseView
                     <img src="https://image.shutterstock.com/image-vector/user-icon-trendy-flat-style-260nw-418179865.jpg">
                 </div>
                 <h2>Sócio Tribo do Vale</h2>
-                <h4>Associação atlética acadêmica ceavi</h4>
-                <h5>Nome estudante</h5>
-                <h5>Data nascimento</h5>
-                <h5>CPF</h5>
-                <h5>Matricula</h5>
-                <h5>Curso</h5>
+                <h5>Associação atlética acadêmica ceavi</h5>
+                <h6>Nome estudante</h6>
+                <h6>Data nascimento</h6>
+                <h6>CPF</h6>
+                <h6>Matricula</h6>
+                <h6>Curso</h6>
                 <div class="qr-code">
                     <img src="https://www.shopify.com/growth-tools-assets/qr-code/shopify-faae7065b7b351d28495b345ed76096c03de28bac346deb1e85db632862fd0e4.png">
                 </div>
