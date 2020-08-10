@@ -9,6 +9,7 @@ abstract class BaseResponse
     const TYPE_GRID = 'grid';
     const TYPE_MESSAGE = 'message';
     const TYPE_FROM = 'form';
+    const TYPE_API = 'api';
 
     protected $type;
 

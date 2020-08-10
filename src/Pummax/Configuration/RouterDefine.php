@@ -43,6 +43,10 @@ class RouterDefine
                 'control' => 'Control::Site::FrontEndController.parceiros',
                 'privilegio' => self::ALL_USER,
             ],
+            '/api/login' => [
+                'control' => 'Control::Site::ApiController.login',
+                'privilegio' => self::ALL_USER,
+            ],
             //----------Base Admin
             '/admin' => [
                 'control' => 'Control::Admin::AdminController.run',

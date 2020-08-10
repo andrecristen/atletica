@@ -95,7 +95,7 @@ class Usuario
     }
 
     /**
-     * @return mixed
+     * @return Pessoa
      */
     public function getPessoa()
     {

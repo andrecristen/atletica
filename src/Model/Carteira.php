@@ -105,7 +105,7 @@ class Carteira
     }
 
     /**
-     * @return mixed
+     * @return Imagem
      */
     public function getImagem()
     {

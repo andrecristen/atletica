@@ -4,6 +4,7 @@
 namespace Pummax\Controller;
 
 
-class BaseApiController extends BaseController
+abstract class BaseApiController extends BaseController
 {
+
 }
