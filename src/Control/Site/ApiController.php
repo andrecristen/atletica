@@ -29,14 +29,16 @@ class ApiController extends BaseApiController
                 $id = null;
                 $dataVencimento = null;
                 $imagem = null;
+                $curso = null;
                 if($carteiraModel){
                     $id = $carteiraModel->getId();
                     $dataVencimento =  $carteiraModel->getDataVencimento()->format('d/m/Y');
                     $imagem = DataBase::URL_SITE."utils/".$carteiraModel->getImagem()->getPatch();
+                    $curso = $carteiraModel->getCurso()->getNome();
                 }
                 $data = [
                     'id' => $id,
-                    'curso' => 'Engenharia',
+                    'curso' => $curso,
                     'usuario' => [
                         'id' => $usuarioModel->getId(),
                         'login' => $usuarioModel->getLogin(),

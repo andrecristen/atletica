@@ -57,7 +57,7 @@ class Carteira
     }
 
     /**
-     * @return mixed
+     * @return Curso
      */
     public function getCurso()
     {
