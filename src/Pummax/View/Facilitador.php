@@ -14,7 +14,7 @@ class Facilitador
         $baseControl = new BaseController();
         $usuario = $baseControl->getUserModelSession();
         $usuario = $usuario->getPessoa()->getNome();
-        $cache = "?v=20-04-2020-1";
+        $cache = "?v=10-08-2020-1";
         $data = new \DateTime();
         include 'admin.phtml';
     }

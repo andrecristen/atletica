@@ -11,7 +11,7 @@ abstract class BaseView extends BaseController
     public function __construct($createMenu = true, $createFooter = true)
     {
         parent::__construct();
-        $cache = "?v=20-04-2020-1";
+        $cache = "?v=10-08-2020-1";
         ?>
         <html lang="pt" class="translated-ltr">
         <head>

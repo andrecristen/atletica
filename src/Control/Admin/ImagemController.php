@@ -35,13 +35,26 @@ class ImagemController extends BaseController
         $ext = $this->getExtension($fileType);
         $date = new \DateTime();
         $tipoName = Imagem::tipoList();
-        $path = '/img/'.$tipoName[$tipo].'/'.$date->format('dmYHis').$nomeAll.".".$ext;
-        $target = __DIR__ .'/../../../utils'.$path;
-        move_uploaded_file($nome, $target);
+        //Diretório base para imagens
+        $dir = __DIR__ .'/../../../utils/';
+        //pasta da imagens mais o tipo de upload
+        $pathSave = 'img/'.$tipoName[$tipo].'/';
+        //Nome do arquivo que será salvo
+        $fileSave = $date->format('dmYHis').$nomeAll.".".$ext;
+        //Path completo para ser salvo
+        $path = $dir.$pathSave;
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+        //Path do arquivo que sera salvo
+        $pathFile = $path.$fileSave;
+        move_uploaded_file($nome, $pathFile);
         $imagem = new Imagem();
         $imagem->setTitulo($nomeAll);
         $imagem->setNome($nomeAll);
-        $imagem->setPatch($path);
+        //Path do modelo que será salvo
+        $pathModel = $pathSave.$fileSave;
+        $imagem->setPatch($pathModel);
         $imagem->setTipo($tipo);
         $imagem->setAtivo(true);
         if($persist){

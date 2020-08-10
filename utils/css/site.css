@@ -114,12 +114,13 @@ body {
     font-family:'verdana';
 }
 .id-card-holder {
-    width: 380px;
+    width: 100%;
     padding: 4px;
     margin: 0 auto;
     background-color: #1f1f1f;
     border-radius: 5px;
     position: relative;
+    margin-bottom: 20px;
 }
 .id-card-holder:after {
     content: '';
@@ -139,7 +140,7 @@ body {
     height: 100px;
     position: absolute;
     top: 105px;
-    left: 369px;
+    left: 97%;
     border-radius: 5px 0 0 5px;
 }
 .id-card {
@@ -152,20 +153,12 @@ body {
 .id-card img {
     margin: 0 auto;
 }
-.header-left img {
-    float: left;
-    width: 100px;
-    margin-top: 15px;
 
-}
-.headers{
-    padding-left: 90px;
-}
-.header-right img{
-    float: right;
+.headers img{
     width: 100px;
     margin-top: 15px;
 }
+
 .photo img {
     width: 120px;
     margin-top: 10px;
