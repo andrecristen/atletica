@@ -93,8 +93,17 @@ class ConfiguracaoForm extends AbstractForm
                         </div>
                         <!-- Preço -->
                         <div ng-if="data.tipo == TIPO_PRECO">
-                            <div class="alert alert-danger">
-                                <span>Não utilizado</span>
+                            <div class="form-group">
+                                <label for="port">1 Semestre</label>
+                                <input ng-required="true" ng-model="data.configuracao[\'um_semestre\']" type="text" class="form-control" id="port" >
+                            </div>
+                            <div class="form-group">
+                                <label for="port">2 Semestres (Valor por semestre)</label>
+                                <input ng-required="true" ng-model="data.configuracao[\'dois_semestre\']" type="text" class="form-control" id="port" >
+                            </div>
+                            <div class="form-group">
+                                <label for="port">4 Semestres (Valor por semestre)</label>
+                                <input ng-required="true" ng-model="data.configuracao[\'quatro_semestre\']" type="text" class="form-control" id="port" >
                             </div>
                         </div>
                         <!-- Textos Site -->

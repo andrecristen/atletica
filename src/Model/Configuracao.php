@@ -6,6 +6,7 @@ namespace Model;
 
 use Model\LeituraConfiguracao\ConfiguracaoEmail;
 use Model\LeituraConfiguracao\ConfiguracaoImagem;
+use Model\LeituraConfiguracao\ConfiguracaoPreco;
 
 /**
  * @Entity(repositoryClass="Repository\ConfiguracaoRepository")
@@ -101,6 +102,9 @@ class Configuracao
                 break;
              case self::TIPO_IMAGEM:
                 return new ConfiguracaoImagem($this);
+                break;
+            case self::TIPO_PRECO:
+                return new ConfiguracaoPreco($this);
                 break;
             default:
                 return null;
