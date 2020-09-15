@@ -68,7 +68,7 @@ class RouterController
     private function processResponse($response, $router){
         if($response instanceof BaseResponse){
             $json = Json::decode($response->getJsonFormat());
-            if($router){
+            if($router && isset($router['title'])){
                 $json['title'] = $router['title'];
             }
             echo Json::encode($json);

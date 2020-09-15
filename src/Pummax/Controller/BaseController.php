@@ -34,6 +34,7 @@ class BaseController extends HandlerException
     public function getRequest(){
         return $_REQUEST;
     }
+
     public function getResquestParam($name){
         $request = $this->getRequest();
         if(isset($request[$name])){

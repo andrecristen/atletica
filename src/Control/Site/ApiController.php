@@ -16,7 +16,7 @@ class ApiController extends BaseApiController
 
     public function login()
     {
-        $request = $this->getRequest();
+        $request = $this->getApiRequest();
         if (isset($request['login']) && isset($request['password'])) {
             /** @var $repositorio UsuarioRepository*/
             $repositorio = $this->getEntityManager()->getRepository(Usuario::class);
