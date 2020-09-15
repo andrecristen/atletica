@@ -130,7 +130,7 @@ class Parceiro
     }
 
     /**
-     * @return mixed
+     * @return Endereco
      */
     public function getEndereco()
     {

@@ -5,6 +5,7 @@ namespace Control\Site;
 
 
 use Model\Carteira;
+use Model\Parceiro;
 use Model\Usuario;
 use Pummax\Configuration\DataBase;
 use Pummax\Controller\BaseApiController;
@@ -16,13 +17,7 @@ class ApiController extends BaseApiController
 
     public function login()
     {
-        $request = $this->getApiRequest();
-//        return new ApiResponse(true, "Parametros Enviados", [
-//            'request' => $this->getRequest(),
-//            'post' => $this->getData(),
-//            'get' => $_GET,
-//            'api-requets' => $this->getApiRequest(),
-//        ]);
+        $request = $this->getData();
         if (isset($request['login']) && isset($request['password'])) {
             /** @var $repositorio UsuarioRepository*/
             $repositorio = $this->getEntityManager()->getRepository(Usuario::class);
@@ -68,6 +63,39 @@ class ApiController extends BaseApiController
         } else {
             return new ApiResponse(false, "Não localizado parâmetros para execução da requisição");
         }
+    }
+
+    public function parceiros(){
+        try{
+            $data = [];
+            /** @var $parceiros Parceiro[]*/
+            $parceiros = $this->getEntityManager()->getRepository(Parceiro::class)->findBy(['ativo' => true]);
+            foreach ($parceiros as $parceiro){
+                $imagem = null;
+                if($parceiro->getImagem()){
+                    $imagem = DataBase::URL_SITE."utils/".$parceiro->getImagem()->getPatch();
+                }
+                $data[] = [
+                    'id' => $parceiro->getId(),
+                    'nome' => $parceiro->getNome(),
+                    'endereco' => [
+                        'id' => $parceiro->getEndereco()->getId(),
+                        'cidade' => $parceiro->getEndereco()->getCidade(),
+                        'bairro' => $parceiro->getEndereco()->getBairro(),
+                        'complemento' => $parceiro->getEndereco()->getComplemento(),
+                        'logradouro' => $parceiro->getEndereco()->getLogradouro(),
+                        'numero' => $parceiro->getEndereco()->getNumero(),
+                    ],
+                    'desconto' => $parceiro->getPorcentagemDesconto(),
+                    'cnpj' => $parceiro->getCnpj(),
+                    'imagem' => $imagem,
+                ];
+            }
+            return new ApiResponse(true, "Consulta de parceiros efetuada", $data);
+        }catch (\Exception $exception){
+            return new ApiResponse(false, $exception->getMessage());
+        }
+
     }
 
 }
