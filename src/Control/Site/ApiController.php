@@ -16,13 +16,13 @@ class ApiController extends BaseApiController
 
     public function login()
     {
-        $request = $this->getData();
-        return new ApiResponse(true, "Parametros Enviados", [
-            'request' => $this->getRequest(),
-            'post' => $this->getData(),
-            'get' => $_GET,
-            'api-requets' => $this->getApiRequest(),
-        ]);
+        $request = $this->getApiRequest();
+//        return new ApiResponse(true, "Parametros Enviados", [
+//            'request' => $this->getRequest(),
+//            'post' => $this->getData(),
+//            'get' => $_GET,
+//            'api-requets' => $this->getApiRequest(),
+//        ]);
         if (isset($request['login']) && isset($request['password'])) {
             /** @var $repositorio UsuarioRepository*/
             $repositorio = $this->getEntityManager()->getRepository(Usuario::class);
